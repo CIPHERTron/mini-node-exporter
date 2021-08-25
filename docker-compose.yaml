@@ -1,0 +1,9 @@
+version: "3"
+services:
+          mini-node-exporter:
+                    build:
+                              context: ./mini-node-exporter
+                    container_name: mini-node-exporter
+                    image: mini-node-exporter
+                    ports:
+                              - "23333:23333"
