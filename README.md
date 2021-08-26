@@ -77,8 +77,10 @@ docker-compose up -d --build grafana
 4. The `mini-node-exporter` application will be having the endpoints as follows:
 
 - `/info/uptime` - Displays the Uptime of the server
-- `/info/load` - Displays the average load of the system in 1s, 5s and 15s in the form of a JSON.
+- `/info/load` - Displays the average load of the system in 1m, 5m and 15m in the form of a JSON.
 - `/metrics` is the endpoint which exposes two gauge metrics i.e `node_load` & `node_uptime`
+
+5. To fetch the `metrics`, open your terminal & run `curl -GET localhost:23333/metrics`. This will return all the default as well as custom metrics.
 
 ### Relevant Screenshots:
 

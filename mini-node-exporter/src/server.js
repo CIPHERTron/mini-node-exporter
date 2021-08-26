@@ -1,3 +1,4 @@
+// Importing Modules
 require("dotenv").config()
 const os = require("os")
 const process = require("process")
@@ -16,7 +17,6 @@ app.use(cors())
 const register = new client.Registry()
 const collectDefaultMetrics = client.collectDefaultMetrics
 
-// Probe every 5th second
 collectDefaultMetrics({
 	app: "mini-node-exporter",
 	timeout: 10000,
@@ -37,8 +37,8 @@ register.registerMetric(
 
 register.registerMetric(
 	new client.Gauge({
-		name: "node_load_duration_1s",
-		help: "Average Load during 1s",
+		name: "node_load_duration_1m",
+		help: "Average Load during 1m",
 		async collect() {
 			const load = await os.loadavg()[0]
 			this.set(load)
@@ -48,8 +48,8 @@ register.registerMetric(
 
 register.registerMetric(
 	new client.Gauge({
-		name: "node_load_duration_5s",
-		help: "Average Load during 5s",
+		name: "node_load_duration_5m",
+		help: "Average Load during 5m",
 		async collect() {
 			const load = await os.loadavg()[1]
 			this.set(load)
@@ -59,8 +59,8 @@ register.registerMetric(
 
 register.registerMetric(
 	new client.Gauge({
-		name: "node_load_duration_15s",
-		help: "Average Load during 15s",
+		name: "node_load_duration_15m",
+		help: "Average Load during 15m",
 		async collect() {
 			const load = await os.loadavg()[2]
 			this.set(load)
@@ -81,7 +81,6 @@ app.get("/info/hostname", (req, res) => {
 // Display Uptime Endpoint
 app.get("/info/uptime", (req, res, err) => {
 	const upTime = process.uptime()
-
 	res.json({ uptime: upTime })
 })
 
@@ -97,6 +96,7 @@ app.get("/metrics", async (req, res) => {
 	res.send(await register.metrics())
 })
 
+// App Listen
 app.listen(23333, () => {
 	console.log("Server running successfully! Running on: 23333")
 })
