@@ -10,6 +10,7 @@ const client = require("prom-client")
 // Registering app
 const app = express()
 app.use(express.json())
+app.use(cors())
 
 const collectDefaultMetrics = client.collectDefaultMetrics
 
