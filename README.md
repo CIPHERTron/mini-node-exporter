@@ -93,11 +93,11 @@ docker-compose up -d --build grafana
 3. _Graph of node_uptime in Grafana dashboard_
    <img src="images/grafana-1.png" alt="Grafana Dashboard" />
 
-4. _Graph of average load at 1s_
+4. _Graph of average load at 1m_
    <img src="images/grafana-2.png" alt="Grafana Dashboard" />
 
-5. _Graph of average load at 5s_
+5. _Graph of average load at 5m_
    <img src="images/grafana-3.png" alt="Grafana Dashboard" />
 
-6. _Graph of average load at 15s_
+6. _Graph of average load at 15m_
    <img src="images/grafana-4.png" alt="Grafana Dashboard" />
