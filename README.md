@@ -9,6 +9,7 @@
     <a href="https://github.com/STRRL/mini-node-exporter">Assignment</a> for LFX Mentorship Program, <a href="https://chaos-mesh.org/">Chaos Mesh</a> given by <a href="https://github.com/STRRL">@STRRL</a>
   </p>
 </p>
+<h3 align="center">Link to the Image published on <a href="https://hub.docker.com/layers/ciphertron/mini-node-exporter/latest/images/sha256-d6b460e11403f819968134cf65878a9374268ee61f015ceccbb422c5af5ef6d4?context=explore">Dockerhub 🚀</a></h3>
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -20,7 +21,6 @@
       </ul>
         <li><a href="#built-with">Built With</a></li>
     </li>
-  <li><a href="https://hub.docker.com/layers/ciphertron/mini-node-exporter/latest/images/sha256-d6b460e11403f819968134cf65878a9374268ee61f015ceccbb422c5af5ef6d4?context=explore">Image published on Dockerhub</a></li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
@@ -28,15 +28,15 @@
         <li><a href="#running-the-project">Running the project</a></li>
       </ul>
     </li>
-    <li><a href="#screenshots">Relevant Screenshots</a></li>
+    <li><a href="#relevant-screenshots">Relevant Screenshots</a></li>
   </ol>
 </details>
 
-## About The Project
+## ℹ️ About The Project
 
 Mini Node Exporter is the simplest form of the famous <a href="https://github.com/prometheus/node-exporter">prometheus/node-exporter</a>. It is basically a type of monitoring stack and an exporter for hardware and OS metrics that is exposed by the <a href="https://github.com/siimon/prom-client">prom-client</a>. The express, prometheus & grafana servers are containerized using Docker & the whole monitoring stack is orchestrated using Docker Compose.
 
-### Built With
+### 🛠️ Built With
 
 Following technologies and libraries are used for the development of this
 project.
@@ -50,17 +50,17 @@ project.
 
 <!-- GETTING STARTED -->
 
-## Getting Started
+## 📌 Getting Started
 
 To setup the project locally follow the steps below
 
-### Prerequisites
+### 💻 Prerequisites
 
 - [Node.js](https://nodejs.org/en/download/)
 - [Docker](https://docs.docker.com/get-docker/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
-### Running the project.
+### 🤖 Running the project.
 
 To set this up in the local repository:
 
@@ -96,7 +96,7 @@ docker-compose up -d --build grafana
   - To format the legend names of time series, use the "Legend format" input. For example, to show only the method and status labels of a returned query result,        separated by a dash, you could use the legend format string {{method}} - {{status}}.
   - Tune other graph settings until you have a working graph.
 
-### Relevant Screenshots:
+### 📉 Relevant Screenshots:
 
 1. _Prometheus up & running_
    <img src="images/prom.png" alt="Prometheus Config" />
