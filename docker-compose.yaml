@@ -23,3 +23,6 @@ services:
                               - GF_AUTH_BASIC_ENABLED=false
                               - GF_AUTH_ANONYMOUS_ENABLED=true
                               - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+                    volumes:
+                              - ./grafana.yaml:/etc/grafana/provisioning/datasources/datasource.yaml
+                              - ./grafana/dashboard.yaml:/etc/grafana/provisioning/dashboards/dashboards.yaml
