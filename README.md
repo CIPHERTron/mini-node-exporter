@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/CIPHERTron/mini-node-exporter/">
-    <img src="https://dyltqmyl993wv.cloudfront.net/assets/stacks/node-exporter/img/node-exporter-stack-110x117.png" width="131" height="54">
+    <img src="https://dyltqmyl993wv.cloudfront.net/assets/stacks/node-exporter/img/node-exporter-stack-110x117.png">
   </a>
 
   <h3 align="center">Mini Node Exporter</h3>
