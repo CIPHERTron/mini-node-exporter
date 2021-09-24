@@ -1,12 +1,12 @@
 <p align="center">
-  <a href="https://chaos-mesh.org/">
-    <img src="https://chaos-mesh.org/img/logos/logo-mini.svg" alt="Chaos Mesh Logo" width="131" height="54">
+  <a href="https://github.com/CIPHERTron/mini-node-exporter/">
+    <img src="https://dyltqmyl993wv.cloudfront.net/assets/stacks/node-exporter/img/node-exporter-stack-110x117.png" width="131" height="54">
   </a>
 
   <h3 align="center">Mini Node Exporter</h3>
 
   <p align="center">
-    <a href="https://github.com/STRRL/mini-node-exporter">Assignment</a> for LFX Mentorship Program, <a href="https://chaos-mesh.org/">Chaos Mesh</a> given by <a href="https://github.com/STRRL">@STRRL</a>
+    A mini replica of prometheus/node-exporter where it exposes the basic CPU metrics like uptime, average load, hostname, etc.
   </p>
 </p>
 <h3 align="center">Link to the Image published on <a href="https://hub.docker.com/layers/ciphertron/mini-node-exporter/latest/images/sha256-d6b460e11403f819968134cf65878a9374268ee61f015ceccbb422c5af5ef6d4?context=explore">Dockerhub 🚀</a></h3>
@@ -116,5 +116,3 @@ docker-compose up -d --build grafana
 
 6. _Graph of average load at 15m_
    <img src="images/grafana-4.png" alt="Grafana Dashboard" />
-
-> Submitted by: Pritish Samal (@CIPHERTron)
