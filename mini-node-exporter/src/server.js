@@ -68,6 +68,17 @@ register.registerMetric(
 	})
 )
 
+register.registerMetric(
+	new client.Gauge({
+		name: "node_load_duration_15m",
+		help: "Average Load during 15m",
+		async collect() {
+			const platform = await os.platform()
+			this.set(platform)
+		},
+	})
+)
+
 // Home route
 app.get("/", (req, res) => {
 	res.send("Hello world")
@@ -88,6 +99,12 @@ app.get("/info/uptime", (req, res, err) => {
 app.get("/info/load", (req, res, err) => {
 	const avgLoad = os.loadavg()
 	res.json({ "1m": avgLoad[0], "5m": avgLoad[1], "15m": avgLoad[2] })
+})
+
+// Display Platform
+app.get("/info/platform", (req, res, err) => {
+	const platfrm = os.platform()
+	res.json({ platform: platfrm })
 })
 
 // Metrics Endpoint
